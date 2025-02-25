@@ -6,6 +6,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { DriversModule } from './drivers/drivers.module';
+import { AuthDriversModule } from './auth-drivers/auth-drivers.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { DriversModule } from './drivers/drivers.module';
     UsersModule,
     AuthModule,
     DriversModule,
+    AuthDriversModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -27,4 +27,12 @@ export class DriversService {
     });
     return newDriver.save();
   }
+
+  async findByEmail(email: string): Promise<Driver | null> {
+    return this.driverModel.findOne({ email }).exec();
+  }
+
+  async findById(id: string): Promise<Driver | null> {
+    return this.driverModel.findById(id).exec();
+  }
 }

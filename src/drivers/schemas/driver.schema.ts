@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export type DriverDocument = Driver & Document;
 
@@ -22,6 +22,8 @@ export class Driver {
 
   @Prop({ required: true })
   carNumber: string;
+
+  _id: Types.ObjectId;
 }
 
 export const DriverSchema = SchemaFactory.createForClass(Driver);
