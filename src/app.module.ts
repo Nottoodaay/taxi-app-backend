@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { DriversModule } from './drivers/drivers.module';
 import { AuthDriversModule } from './auth-drivers/auth-drivers.module';
+import { TaxiGateway } from './taxi/taxi.gateway';
 
 @Module({
   imports: [
@@ -26,6 +27,6 @@ import { AuthDriversModule } from './auth-drivers/auth-drivers.module';
     AuthDriversModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, TaxiGateway],
 })
 export class AppModule {}
